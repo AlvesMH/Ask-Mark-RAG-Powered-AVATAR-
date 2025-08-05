@@ -60,24 +60,7 @@ A full-stack conversational AI application featuring document-powered retrieval 
 
 ## Architecture
 
-┌────────────────────┐ ┌───────────────────┐
-│ React Frontend │ <───┐ │ FastAPI API │
-│ (Vite + three.js) │ └─▶│ (Uvicorn) │
-│ - AvatarCanvas │ │ - Auth Routes │
-│ - ChatBox │ │ - Upload & Chat │
-└────────────────────┘ └───────────────────┘
-│ │
-│ ▼
-│ ┌────────────────┐
-│ │ Pinecone │
-│ │ Vector Database│
-│ └────────────────┘
-│ ▲
-▼ │
-┌────────────────────┐ ┌───────────────────┐
-│ Sea-Lion LLM API │◀──────▶│ PDF Chunks & │
-│ (aisingapore/…) │ │ Chat Memory Index │
-└────────────────────┘ └───────────────────┘
+![Architecture](img/architecture.jpg)
 
 
 ---
@@ -150,32 +133,8 @@ Frontend proxies /api to http://localhost:10000 via Vite config.
 ```
 
 # Folder Structure
+![Folder Structure](img/folder_structure.jpg)
 
-
-├── Dockerfile
-├── README.md
-├── .env
-├── users.json
-├── img/                         
-│   ├── login.png
-│   ├── upload-documents.png
-│   ├── chat-interface.png
-│   └── morph-map-tester.png
-├── backend/
-│   ├── requirements.txt
-│   └── app/
-│       ├── main.py
-│       └── routes/
-│           ├── auth.py
-│           └── chat.py
-└── frontend/
-    ├── package.json
-    ├── vite.config.mjs
-    └── src/
-        ├── App.jsx
-        ├── components/
-        ├── utils/
-        └── assets/
 
 # Usage
 
