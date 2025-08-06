@@ -8,7 +8,7 @@ A full-stack conversational AI application featuring document-powered retrieval 
 ![Avatar in Action](img/img1.jpg)  
 *Avatar in Action*
 
-![Mobile View](img/img_m1.jpg)  
+![Mobile View](img/img_1.jpg)  
 *Mobile Friendly*
 
 ---
@@ -159,7 +159,7 @@ Observe the animated avatar providing the answers, with expressions, visemes, an
 ![Login Menu](img/img4.jpg)  
 *Login for memory persistence*
 
-![Mobile RAG + AVATAR](img/img_m2.jpg)  
+![Mobile RAG + AVATAR](img/img_3.jpg)  
 *Searches both Documents and Conversation history*
 
 License
