@@ -5,11 +5,11 @@
 A full-stack conversational AI application featuring document-powered retrieval (RAG), secure user authentication, and a real-time animated 3D avatar (ARKit → GLB morph mappings). Built with React, Three.js, FastAPI, Pinecone, and Sea-Lion LLM, all containerized via Docker.
 
 ---
-![Avatar in Action](img/img4.jpg)  
+![Avatar in Action](img/img1.jpg)  
 *Avatar in Action*
 
-![Login Screen](img/img3.jpg)  
-*Secure user registration & login*
+![Mobile View](img/img_m1.jpg)  
+*Mobile Friendly*
 
 ---
 
@@ -150,10 +150,16 @@ Chat with the assistant—queries leverage your documents plus chat history.
 
 Observe the animated avatar providing the answers, with expressions, visemes, and head gestures.
 
-![Avatar](img/img1.jpg)  
+![Avatar](img/img2.jpg)  
 *ARKit → GLB morph mapping*
 
-![Vectorstore Ingestion](img/img2.jpg)  
+![Vectorstore Ingestion](img/img3.jpg)  
+*Searches both Documents and Conversation history*
+
+![Login Menu](img/img4.jpg)  
+*Login for memory persistence*
+
+![Mobile RAG + AVATAR](img/img_m2.jpg)  
 *Searches both Documents and Conversation history*
 
 License
