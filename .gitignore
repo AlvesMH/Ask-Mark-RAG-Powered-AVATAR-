@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+
+# Local data
+backend/chroma_db/
+backend/users.json
+backend/.env
+
+# Uploads (if you store any)
+uploads/
+.env

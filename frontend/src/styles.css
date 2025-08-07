@@ -1,0 +1,159 @@
+/* Desktop layout (unchanged) */
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.left-pane {
+  flex: 1;
+  background: #000;
+}
+.left-pane canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+.right-pane {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Mobile: avatar occupies top half */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .left-pane {
+    flex: none;
+    height: 50vh;    /* avatar = top half */
+  }
+  .right-pane {
+    flex: none;
+    height: 50vh;    /* UI = bottom half */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ---------- Small overlay link on avatar (top-right) ---------- */
+.left-pane { position: relative; }
+.gh-link {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 10;
+  font-size: 12px;
+  color: #c7c7c7;
+  text-decoration: none;
+  background: rgba(0,0,0,0.45);
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.1px;
+}
+.gh-link:hover { color: #fff; background: rgba(0,0,0,0.6); }
+
+/* ---------- Header row in right pane ---------- */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Link-looking button used for "How to Use" */
+.link-button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #0a66c2;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:hover { color: #084c8d; }
+
+/* ---------- Modal styles ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* above canvas */
+}
+.modal-panel {
+  width: min(720px, 92vw);
+  max-height: 86vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.modal-close {
+  appearance: none;
+  border: none;
+  background: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+}
+.modal-close:hover { color: #000; }
+
+.modal-body {
+  padding: 14px 18px 8px;
+  color: #333;
+}
+.modal-body p { margin-top: 0; }
+.howto-steps {
+  margin: 0.25rem 0 0.5rem;
+  padding-left: 1.15rem;
+}
+.howto-steps li { margin: 0.5rem 0; }
+.howto-steps code {
+  background: #f4f4f4;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 18px 14px;
+  border-top: 1px solid #eee;
+}
+.btn-primary {
+  appearance: none;
+  border: none;
+  background: #0a66c2;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #084c8d; }
+
+/* Mobile tweaks for modal width/padding */
+@media (max-width: 480px) {
+  .modal-panel {
+    width: 94vw;
+    max-height: 88vh;
+    border-radius: 10px;
+  }
+}

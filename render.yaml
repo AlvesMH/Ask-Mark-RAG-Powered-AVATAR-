@@ -1,0 +1,21 @@
+# render.yaml
+services:
+  - type: web
+    name: ai-chat-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: PINECONE_CLOUD
+        value: aws
+      - key: PINECONE_REGION
+        value: us-east-1
+      - key: 
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+
