@@ -1,6 +1,6 @@
 # 3D RAG Avatar
 
-[LIVE-DEMO](https://ask-mark.onrender.com/)
+# [LIVE-DEMO](https://ask-mark.onrender.com/)
 
 A full-stack conversational AI application featuring document-powered retrieval (RAG), secure user authentication, and a real-time animated 3D avatar (ARKit → GLB morph mappings). Built with React, Three.js, FastAPI, Pinecone, and Sea-Lion LLM, all containerized via Docker.
 
@@ -166,3 +166,4 @@ License
 MIT License
 
 ---
+
